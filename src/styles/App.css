@@ -1,0 +1,173 @@
+body {
+  background-image: url('../wallpaper.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: white;
+}
+
+.form-container {
+  background-color: rgba(0, 0, 0, 0.19);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 1200px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: auto; 
+  margin: 60px;
+  
+}
+
+.form-container select,
+.form-container button {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-container button {
+  background-color: #1e90ff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.form-container button:hover {
+  background-color: #4682b4;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.weather-alerts-container {
+  grid-column: span 3;
+  width: 100%;
+}
+
+.forecastText {
+  text-align: center;
+}
+
+.card {
+  background-color: rgba(0, 0, 0, 0.19);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.navigation {
+  margin-top: 20px;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  width: 100%;
+}
+
+.navigation button {
+  padding: 10px 100px;
+  background-color: #1e90ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.navigation button:hover {
+  background-color: #4682b4;
+}
+
+.forecast-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.forecast-day {
+  background-color: rgba(0, 0, 0, 0.19);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 275px;
+  height: 200px;
+}
+
+.alerta-ventania {
+  color: red;
+  border: 2px solid red;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.alerta-ventania::before {
+  content: '⚠️';
+  margin-right: 10px;
+}
+
+/* Site Responsivo */
+@media (max-width: 1200px) {
+  .form-container {
+    width: 90%;
+  }
+
+  .navigation button {
+    padding: 10px 80px;
+  }
+
+  .forecast-day {
+    width: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .form-container {
+    width: 95%;
+    padding: 20px;
+    margin: 20px;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .navigation button {
+    padding: 10px 60px;
+  }
+
+  .forecast-day {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-container {
+    width: 100%;
+    padding: 10px;
+    margin: 10px;
+  }
+
+  .navigation button {
+    padding: 10px 40px;
+  }
+}
